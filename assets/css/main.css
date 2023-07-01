@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500&display=swap&subset=chinese-traditional');
-
 body {
   margin: 0;
   font-family: "Noto Sans TC", "Microsoft Yahei", "微軟雅黑", sans-serif;
   padding-top: 70px; /* New, ensure content does not get covered by header */
 }
-
 header {
   justify-content: space-between;
   align-items: center;
@@ -16,9 +13,12 @@ header {
   background-color: #212121;
   color: #ffffff;
   border-bottom: 1px solid #eee;
-  box-shadow: -3px 2px 8px 1px rgba(47,47,47,.12);
+  box-shadow: -3px 2px 8px 1px rgba(47, 47, 47, 0.12);
 }
-
+.entry-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,8 +27,37 @@ header {
   align-items: center;
   padding: 3px 20px;
 }
-
-.logo, .menu, .social-icons {
+.content {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .section {
+  margin-bottom: 20px;
+  flex-basis: 30%;
+}
+.content h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.content p {
+  color: #34495e;
+  line-height: 1.6;
+}
+.content .fa {
+  display: block;
+  color: #7db6b1;
+  font-size: 48px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.logo,
+.menu,
+.social-icons {
   display: flex;
   align-items: center;
 }
@@ -99,7 +128,7 @@ header {
   position: absolute;
   background-color: #3a3a3a;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* New, give a shadow to the dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* New, give a shadow to the dropdown */
 }
 
 .menu.desktop .dropdown-content a {
@@ -113,15 +142,11 @@ header {
   display: block;
 }
 
-.social-icons a {
-  margin-right: 10px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
 .menu-toggle {
   display: none;
   color: #ffffff; /* New, make sure the toggle symbol is white */
+  cursor: pointer;
+  font-size: 24px;
 }
 
 .menu.mobile {
@@ -155,23 +180,138 @@ header {
   font-size: 20px;
   margin-right: 10px;
 }
-
-.social-icon-facebook::before {
-  content: "\f09a"; /* FontAwesome Facebook icon */
-}
-
-.social-icon-twitter::before {
-  content: "\f099"; /* FontAwesome Twitter icon */
-}
-
-.social-icon-instagram::before {
-  content: "\f16d"; /* FontAwesome Instagram icon */
+.social-icons a {
+  margin-right: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  width: 35px;
+  fill: #fff;
 }
 @media (max-width: 920px) {
   .menu.desktop {
     display: none;
   }
-  .menu.mobile, .menu-toggle {
+  .menu.mobile,
+  .menu-toggle {
     display: block;
+  }
+}
+.footer-admin {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 700px;
+}
+
+.icon-media {
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  padding: 10px 5px;
+  margin: 5px;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  font-weight: 600;
+  font-family: "Microsoft JhengHei";
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-media:hover {
+  transform: scale(1.1);
+  color: white;
+}
+.icon-media:focus {
+  color: white;
+}
+#icon1 {
+  background-color: #06c755;
+}
+
+#icon2 {
+  background-color: #25d366;
+}
+
+#icon3 {
+  background-color: #2ec100;
+}
+.image-container {
+  position: fixed;
+  bottom: 90px;
+  width: 200px;
+  height: 200px;
+  right: 150px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 750px) {
+  .social-media {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .icon-media {
+    font-size: 14px;
+    margin: 0px;
+    padding: 10px 0px;
+    width: inherit;
+    border-radius: 0px;
+    border-top: 2px solid #ffffff;
+  }
+  .footer-admin {
+    padding: 0px;
+  }
+  .icon-media:hover {
+    transform: none;
+  }
+  .icon-media:not(:last-child) {
+    border-right: 2px solid #ffffff;
+  }
+  .image-container {
+    bottom: 70px;
+    width: 150px;
+    height: 150px;
+    right: 0px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content .section {
+    flex-basis: 100%;
+  }
+  .content .fa {
+    font-size: 36px;
+  }
+  .content h3 {
+    font-size: 18px;
+  }
+  .content p {
+    font-size: 14px;
   }
 }
