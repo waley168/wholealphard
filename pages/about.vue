@@ -1,5 +1,6 @@
 <template>
-    <section>
-        <p>This page will be displayed at the /about route.</p>
-    </section>
+    <div>
+        <h1>測試關於</h1>
+        <NuxtLink to="/">index</NuxtLink>
+    </div>
 </template>
