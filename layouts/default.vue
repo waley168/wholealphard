@@ -2,9 +2,19 @@
     <div>
         <TheHeader />
         <div class="entry-content">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a rel="noopener noreferrer" href="https://wholealphard.com/">首頁</a></li>
+                    <li aria-current="page" class="breadcrumb-item active">title</li>
+                </ol>
+            </nav>
+            <div class="hero-img"
+                style="background-image: url('https://wholealphard.com/wp-content/uploads/2023/06/wholealphard-banner01.png');">
+            </div>
             <slot />
+            <a href="#"><div class="refined-button">Click Me</div></a>
 
-            <h2><slot name="title" />阿法租車服務項目</h2>
+            <h2>阿法租車服務項目</h2>
             <div class="content">
                 <div class="section portion3">
                     <div class="img-container"
@@ -363,18 +373,87 @@
                 </div>
             </div>
             <h2>阿法租車流程</h2>
+            <ol>
+                <li>貴賓詢價並提供日期、地點、行程內容後，客服人員協助確認車輛。</li>
+                <li>為您確認車輛後，報價並提供訂車單與車輛參考照片，接續付訂流程。</li>
+                <li>完成訂金支付，確認收款即完成訂車手續。</li>
+                <li>出發前二日將提供您車籍資料與駕駛資訊，司機將於前一日與您取得聯繫。</li>
+            </ol>
             <div class="content">
                 <div class="section portion3">
-                    <ol>
-                        <li>貴賓詢價並提供日期、地點、行程內容後，客服人員協助確認車輛。</li>
-                        <li>為您確認車輛後，報價並提供訂車單與車輛參考照片，接續付訂流程。</li>
-                        <li>完成訂金支付，確認收款即完成訂車手續。</li>
-                        <li>出發前二日將提供您車籍資料與駕駛資訊，司機將於前一日與您取得聯繫。</li>
-                    </ol>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <h3 class="faq-question">1. 請問貴公司提供之車輛合法性?</h3>
+                            <p class="faq-answer">本公司所安排之車輛皆為有保險保障之「租賃車」(車牌為R開頭)，絕非不能營業載客且沒有保險理賠的「白牌車」(如其他A、B、C等字頭車牌)</p>
+                        </div>
+                        <div class="faq-item">
+                            <h3 class="faq-question">2. 訂單何時成立？</h3>
+                            <p class="faq-answer">在客服人員與您雙向確認乘車資訊後，會請您支付訂金以確保訂單權益，確認收取您訂金後訂單將即刻生效。</p>
+                        </div>
+                        <div class="faq-item">
+                            <h3 class="faq-question">3. 付款方式與發票開立</h3>
+                            <p class="faq-answer">
+                                本公司提供轉帳匯款及信用卡線上支付，信用卡支付皆支援3D驗證等安全措施，讓您無須擔心遭受盜刷或個資外流；本公司合法開立發票(二聯或三聯)，包車所提供之報價皆以未稅登載。</p>
+                        </div>
+                        <div class="faq-item">
+                            <h3 class="faq-question">4. 包車費用包含?</h3>
+                            <p class="faq-answer">客服人員報價時，會將價格詳加記載是否包含司機餐費、住宿費、停車費、燃料費、過路費等，亦不會於用車過程中臨時加價，造成爭議。</p>
+                        </div>
+                        <div class="faq-item">
+                            <h3 class="faq-question">5. 訂車時所需提供資訊</h3>
+                            <ul class="faq-answer">
+                                <li>日期(確認是否有車)</li>
+                                <li>人數(確認所安排車款是否合法載運)</li>
+                                <li>上下車位置(確認流程順暢)</li>
+                                <li>大致行程及用車天數(確認行程遠近、路程長度及司機住宿位置費用…等等)</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="section portion6">
                     <img src="https://wholealphard.com/wp-content/uploads/2023/06/flow.png" />
                 </div>
+            </div>
+            <h2>阿法租車常見問題</h2>
+            <div class="content">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">1. 燃油政策</h3>
+                        <p class="faq-answer">請滿油取還，若未滿油，還車時依照當下油錶與當周公布油價計算。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">2. 超時用車，如何計價?</h3>
+                        <p class="faq-answer">超時以每小時1000元計算，當日超過六小時者，以一日計算。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">3. 超出里程，如何計價?</h3>
+                        <p class="faq-answer">行駛超過300公里後，每公里以30元計價累計。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">4. E-tag費用</h3>
+                        <p class="faq-answer">取車時皆附有遠通電收之E-tag計價器，車輛租約期間所產生之通行費，將由遠通電收計算於還車時收取費用。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">5. 退訂政策</h3>
+                        <p class="faq-answer">1. 租車出發前72小時前取消用車，免費取消。<br> 2. 租車出發前48小時前取消用車，扣取50%訂金費用。<br> 3.
+                            租車出發前24小時前取消用車，訂金不退款。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">6. 是否需要預付押金或簽訂本票?</h3>
+                        <p class="faq-answer">與本公司租車無須押金、無須簽本票。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">7. 全車輛禁菸並禁止寵物上車，如有違規相關罰款</h3>
+                        <p class="faq-answer">若有發現異味或難清理之汙損，清潔費3000$起。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">8. 承租期間衍生之費用負擔</h3>
+                        <p class="faq-answer">停車費、交通罰鍰及交通違規導致之費用或損失皆由承租人負擔。</p>
+                    </div>
+                </div>
+
+
             </div>
             <h2>家庭/企業租車活動花絮</h2>
             <h3><a href="https://wholealphard.com/portfolio/">看更多阿法租車成功案例</a></h3>
