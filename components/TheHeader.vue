@@ -47,6 +47,8 @@
                 <li><a href="https://wholealphard.com/">首頁</a></li>
                 <li><a href="https://wholealphard.com/about/">關於總發</a></li>
                 <li><a href="https://wholealphard.com/alphard/">ALPHARD租車</a></li>
+                <li><a href="https://wholealphard.com/alphard-rental/">租車詳細流程</a></li>
+                <li><a href="https://wholealphard.com/alphard-qa/">承租注意事項</a></li>
                 <li><a href="https://wholealphard.com/faq/">常見問題</a></li>
                 <li><a href="https://wholealphard.com/contact/">聯絡我們</a></li>
                 <li><a href="https://wholealphard.com/portfolio/">花絮集錦</a></li>
